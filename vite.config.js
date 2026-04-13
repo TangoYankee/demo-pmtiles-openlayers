@@ -1,5 +1,5 @@
+import { BASE_PATH } from "./constants";
+
 export default {
-  build: {
-    sourcemap: true,
-  }
-}
+  base: `${BASE_PATH}/`,
+};
