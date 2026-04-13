@@ -1,5 +1,3 @@
 export default {
-  build: {
-    sourcemap: true,
-  }
-}
+  base: "/demo-pmtiles-openlayers/",
+};
