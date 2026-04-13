@@ -2,6 +2,9 @@ import './style.css';
 import {Map, View} from 'ol';
 import TileLayer from 'ol/layer/Tile';
 import OSM from 'ol/source/OSM';
+import { useGeographic } from 'ol/proj';
+
+useGeographic();
 
 const map = new Map({
   target: 'map',
@@ -11,7 +14,8 @@ const map = new Map({
     })
   ],
   view: new View({
-    center: [0, 0],
-    zoom: 2
+    center: [-74, 40.7],
+    zoom: 11,
+    extent: [-75, 40.2, -73, 41.2],
   })
 });
