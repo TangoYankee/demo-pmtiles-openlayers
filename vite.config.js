@@ -1,3 +1,5 @@
+import { BASE_PATH } from "./constants";
+
 export default {
-  base: "/demo-pmtiles-openlayers/",
+  base: `${BASE_PATH}/`,
 };
