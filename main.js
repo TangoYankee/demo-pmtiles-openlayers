@@ -18,3 +18,31 @@ const map = new Map({
   }),
 });
 
+const defaultStationNameDisplay = "Click on a station to see its name";
+
+map.on("click", async (e) => {
+  const stations = await stationEnvelopeLayer.getFeatures(e.pixel);
+  const stationNameDisplay = document.getElementById("selected-station-name");
+  if (stationNameDisplay === null)
+    throw new Error("could not find element for station name");
+
+  const currentStationName = stationNameDisplay.textContent;
+  if (stations.length <= 0) {
+    stationNameDisplay.textContent = defaultStationNameDisplay;
+  }
+  if (stations.length >= 1) {
+    const station = stations[0];
+    const stationProperties = station.getProperties();
+    const { station_name: nextStationName } = stationProperties;
+
+    if (nextStationName === undefined)
+      throw new Error("name for station not found");
+
+    if (nextStationName === currentStationName) {
+      stationNameDisplay.textContent = defaultStationNameDisplay;
+      return;
+    }
+
+    stationNameDisplay.textContent = nextStationName;
+  }
+});
