@@ -1,4 +1,10 @@
 services:
+  pmtiles:
+    build:
+      context: go-pmtiles/.
+    volumes:
+      - ./source-data:/source-data
+      - ./public:/public
   tippecanoe:
     build:
       context: tippecanoe/.
