@@ -1,0 +1,8 @@
+services:
+  tippecanoe:
+    build:
+      context: tippecanoe/.
+    volumes:
+      - ./source-data:/source-data
+      - ./public:/public
+      - ./tippecanoe/scripts:/scripts
