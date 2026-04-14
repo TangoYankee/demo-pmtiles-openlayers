@@ -4,6 +4,8 @@ import TileLayer from 'ol/layer/Tile';
 import OSM from 'ol/source/OSM';
 import { useGeographic } from 'ol/proj';
 import { stationPointLayer } from './layers/station-point';
+import { stationEnvelopeLayer } from './layers/station-envelope';
+// import { stationEnvelopeTileLayer } from './layers/station-envelope-tiles';
 
 useGeographic();
 
@@ -13,6 +15,8 @@ const map = new Map({
     new TileLayer({
       source: new OSM()
     }),
+    // stationEnvelopeTileLayer,
+    stationEnvelopeLayer,
     stationPointLayer,
   ],
   view: new View({
