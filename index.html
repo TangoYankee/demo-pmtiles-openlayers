@@ -1,13 +1,48 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <link rel="icon" type="image/x-icon" href="https://openlayers.org/favicon.ico" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Using OpenLayers with Vite</title>
-  </head>
-  <body>
-    <div id="map"></div>
-    <script type="module" src="./main.js"></script>
-  </body>
+    <head>
+        <meta charset="UTF-8" />
+        <link
+            rel="shortcut icon"
+            type="image/x-icon"
+            href="data:image/x-icon;base64,"
+        />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Demo PMTiles and OpenLayers</title>
+    </head>
+    <body>
+        <div id="container">
+            <div id="map"></div>
+            <div id="content">
+                <div>
+                    <h1>Lorem ipsum dolor sit amet</h1>
+                    <p>
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                        Donec sollicitudin neque orci, et porta nulla tempus ut.
+                        Proin odio mauris, porttitor vel gravida at, maximus
+                        eget odio. Maecenas libero orci, dictum at arcu eu,
+                        egestas ultricies felis. Sed eget enim eu nunc lobortis
+                        vehicula. Suspendisse neque sem, suscipit vel ante eget,
+                        aliquet fringilla sem. Maecenas aliquam egestas metus,
+                        et porttitor est molestie et. Maecenas vitae tortor ut
+                        ante rutrum fringilla ac id ligula. Phasellus dapibus
+                        ipsum in dui euismod, non egestas turpis pulvinar. Fusce
+                        aliquam, lorem quis varius sodales, enim velit sodales
+                        odio, eget egestas velit velit nec velit. Nunc a tellus
+                        metus. Cras metus erat, pulvinar id odio eu, facilisis
+                        luctus diam. In nunc nulla, interdum ut facilisis et,
+                        elementum non lectus. Etiam posuere mi porta rhoncus
+                        blandit.
+                    </p>
+                </div>
+                <div>
+                    <h2>Station name:</h2>
+                    <p id="selected-station-name">
+                        Click on a station to see its name
+                    </p>
+                </div>
+            </div>
+        </div>
+        <script type="module" src="./main.js"></script>
+    </body>
 </html>

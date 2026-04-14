@@ -1,12 +1,29 @@
 @import "node_modules/ol/ol.css";
 
-html, body {
-  margin: 0;
-  height: 100%;
+html,
+body {
+    margin: 0;
+    padding: 0;
+    height: 100dvh;
+    width: 100dvw;
 }
-#map {
-  position: absolute;
-  top: 0;
-  bottom: 0;
-  width: 100%;
+
+#container {
+    height: 100%;
+    width: 100%;
+    display: grid;
+    grid-template-columns: 2fr minmax(375px, 1fr);
+    grid-template-rows: 1fr;
+}
+
+@media (max-width: 1024px) {
+    #container {
+        grid-template-columns: 1fr;
+        grid-template-rows: 2fr 1fr;
+    }
+}
+
+#content {
+    margin: 0 12px;
+    overflow: scroll;
 }
